@@ -1,0 +1,92 @@
+#about {
+    background-color: hsl(23,100%,97%);
+
+    p{
+        margin-left: 1rem;
+        margin-bottom: 1.5rem;
+        font-weight:200;
+        line-height:1.6rem;
+        font-size: 0.9rem;
+    }
+    .button{
+        color: black;
+        margin-left: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .super-headline {
+        margin-bottom: 0rem;
+    }
+}
+
+@include breakpoint(0, $mobile) {  
+    #about {
+        padding-bottom: 3rem;
+
+        img{
+            margin-top: 3rem;
+            margin-right: 3rem;
+            height: auto;
+            width: 100%;
+        }
+
+       
+        .super-headline {
+            margin-top: 1rem;
+            font-weight: 400;
+        }
+        h2 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 200;
+        }
+        
+       
+    }
+}
+
+
+@include breakpoint($desktop, $max-width) {
+    #about {
+        display: flex;
+        padding: 120px;
+        padding-left: 20px;
+        margin-bottom: 8rem;
+        min-height: 70vh;
+
+        img {
+            width: 50%;
+            object-fit: cover;
+        }
+
+        .about-text {
+            height: 100%;
+            margin: 0 45px;
+            width: 35%;
+        }
+
+        h2 {
+            font-size: 3.55rem;
+            font-weight: 300;
+        }
+
+        .super-headline{
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-top: 0;
+        }
+
+        p{
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 2.5rem;
+            max-width: 100%;
+        }
+
+        .button{
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+    }
+}

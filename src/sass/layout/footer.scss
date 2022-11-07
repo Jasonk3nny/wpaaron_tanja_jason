@@ -1,0 +1,43 @@
+footer {
+    background-color: $bggray;
+    color: white;
+    margin-top:1rem;
+    padding: 0.5rem 0.5rem 1rem 1rem;
+    line-height: 20px;
+    font-weight: 200;
+    font-size: 1rem;
+    a {
+        color: $primary;
+    }
+}
+
+@include breakpoint(0, $mobile) { 
+    footer {
+        h4 {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@include breakpoint($desktop, $max-width) {
+
+    footer {
+        padding-left: 40px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        h4 {
+            font-size:2rem;
+            padding-bottom: 1rem;
+        }
+        p {
+            font-size:1.2rem;
+        }
+        a {
+            float: right;
+            margin-top: -2rem;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+        }
+    }
+}
+
