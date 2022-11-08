@@ -1,4 +1,4 @@
 .DS_Store
-/public/wp-config
+/public/wp-config.php
 public/wp-content/uploads
 /node-modules
