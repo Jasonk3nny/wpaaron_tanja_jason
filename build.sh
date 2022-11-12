@@ -1,5 +1,5 @@
 #!/bin/sh
-npx sass ./src/sass/style.scss ./public/style.css
+npx sass ./src/sass/style.scss ./public/wp-content/aaron/style.css
 cp ./src/index.html ./public/
 cp ./src/favicons/*.* ./public/
 cp -R ./src/images ./public/
