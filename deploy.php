@@ -30,8 +30,8 @@ set('allow_anonymous_stats', false);
 
 // Hosts
 host('vm-alabaster.multimediatechnology.at')
-    ->set('remote_user', 'admin')
-    ->set('port', '5412')
+    ->user('admin')
+    ->port(5412)
     ->set('deploy_path', '/home/admin/aaron');
 
 
@@ -62,3 +62,5 @@ task('deploy', [
 
 // [Optional] If deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
+
+?>
