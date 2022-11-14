@@ -1,10 +1,12 @@
-<?php get_header(); ?>
+<!DOCTYPE html>
+<html lang="en">
 
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron G. Miller</title>
+</head>
 <body>
-    <?php wp_body_open(); ?>
-
-    <?php the_post_thumbnail(); ?>
     <header>
         <a href="/">
             <h1>Aaron G. Miller | <span style="font-weight: 300; text-transform: none;">Choreographer</span> </h1>
@@ -185,7 +187,11 @@
         </section>
     </main>
 
-    <?php get_footer(); ?>
+    <footer>
+    <h4>Thank you for your interest in Art!</h4>
+    <p>© 2004 – 2023 Aaron G. Miller</p>
+    <a href="#">Imprint & Privacy</a>
+    </footer>
     <script src='./main.js'></script>
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {
