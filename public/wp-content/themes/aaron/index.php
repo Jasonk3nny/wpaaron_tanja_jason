@@ -19,10 +19,11 @@
     <title>Aaron G. Miller | Choreographer</title>
     <link rel='stylesheet' href='./style.css'>
     <link rel="icon" type="image/svg+xml" href="images/upfav.svg">
-
+    <?php wp_head(); ?>
 </head>
 
 <body>
+    <?php wp_body_open(); ?>
     <header>
         <a href="/">
             <h1>Aaron G. Miller | <span style="font-weight: 300; text-transform: none;">Choreographer</span> </h1>
@@ -231,6 +232,7 @@
             // MainNav.init();
         });
     </script>
+    <?php wp_footer(); ?>
 </body>
 
 </html>
