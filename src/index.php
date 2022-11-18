@@ -17,7 +17,7 @@
     <meta name="keywords" content="Choreographer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aaron G. Miller | Choreographer</title>
-    <link rel='stylesheet' href='./style.css'>
+    <link rel='stylesheet' href='<?php echo get_template_directory_uri();?>/style.css'>
     <link rel="icon" type="image/svg+xml" href="images/upfav.svg">
     <?php wp_head(); ?>
 </head>
@@ -226,7 +226,7 @@
         <p>© 2004 – 2023 Aaron G. Miller</p>
         <a href="#">Imprint & Privacy</a>
     </footer>
-    <script src='./main.js'></script>
+    <script src='<?php echo get_template_directory_uri();?>/main.js'></script>
     <script>
         document.addEventListener("DOMContentLoaded", function (event) {
             // MainNav.init();
