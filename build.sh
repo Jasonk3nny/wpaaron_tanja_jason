@@ -7,7 +7,7 @@
 # cp -R ./src/fonts ./public/fonts
 # npx esbuild ./src/js/main.js --bundle --outfile=./public/main.js  --minify
 
-cp ./src/index.php ./public/wp-content/themes/aaron/index.php
+cp ./src/php/index.php ./public/wp-content/themes/aaron/index.php
 cp -R ./src/images ./public/wp-content/themes/aaron
 cp -R ./src/fonts ./public/wp-content/themes/aaron
 cp -R ./src/favicons ./public/wp-content/themes/aaron
