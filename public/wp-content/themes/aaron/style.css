@@ -281,6 +281,7 @@ header {
   background-color: black;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-image: url(./images/header-image-2.jpg);
 }
 header h1 {
   max-width: 30rem;
