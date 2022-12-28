@@ -123,29 +123,31 @@
 
         </section>
         <section id="about">
-            <img 
-                sizes="(max-width: 643px) 100vw, 643px"
-                srcset="
-                    <?php echo get_template_directory_uri();?>/images/aaron_w_200.png 200w,
-                    <?php echo get_template_directory_uri();?>/images/aaron_w_301.png 301w,
-                    <?php echo get_template_directory_uri();?>/images/aaron_w_387.png 387w,
-                    <?php echo get_template_directory_uri();?>/images/aaron_w_454.png 454w,
-                    <?php echo get_template_directory_uri();?>/images/aaron_w_512.png 512w,
-                    <?php echo get_template_directory_uri();?>/images/aaron_w_562.png 562w,
-                    <?php echo get_template_directory_uri();?>/images/aaron_w_614.png 614w,
-                    <?php echo get_template_directory_uri();?>/images/aaron_w_643.png 643w"
-                src="<?php echo get_template_directory_uri();?>/images/aaron_w_643.png"
-                alt="This is me" />
-            <div class="about-text">
-                <p class="super-headline">Why I teach</p>
-                <h2>Hi, I'm Aaron!</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil, recusandae
-                    autem aut perferendis reiciendis a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur
-                    asperiores consequatur consectetur ipsum!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil, recusandae
-                    autem aut perferendis reiciendis a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur
-                    asperiores consequatur consectetur ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil, recusandae autem aut perferendis reiciendis a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur asperiores consequatur consectetur ipsum!</p>
-                <a class="button">Learn more</a> <!-- styled as button -->
+            <div class="about-container">
+                <img 
+                    sizes="(max-width: 643px) 100vw, 643px"
+                    srcset="
+                        <?php echo get_template_directory_uri();?>/images/aaron_w_200.png 200w,
+                        <?php echo get_template_directory_uri();?>/images/aaron_w_301.png 301w,
+                        <?php echo get_template_directory_uri();?>/images/aaron_w_387.png 387w,
+                        <?php echo get_template_directory_uri();?>/images/aaron_w_454.png 454w,
+                        <?php echo get_template_directory_uri();?>/images/aaron_w_512.png 512w,
+                        <?php echo get_template_directory_uri();?>/images/aaron_w_562.png 562w,
+                        <?php echo get_template_directory_uri();?>/images/aaron_w_614.png 614w,
+                        <?php echo get_template_directory_uri();?>/images/aaron_w_643.png 643w"
+                    src="<?php echo get_template_directory_uri();?>/images/aaron_w_643.png"
+                    alt="This is me" />
+                <div class="about-text">
+                    <p class="super-headline">Why I teach</p>
+                    <h2>Hi, I'm Aaron!</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil, recusandae
+                        autem aut perferendis reiciendis a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur
+                        asperiores consequatur consectetur ipsum!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil, recusandae
+                        autem aut perferendis reiciendis a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur
+                        asperiores consequatur consectetur ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil, recusandae autem aut perferendis reiciendis a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur asperiores consequatur consectetur ipsum!</p>
+                    <a class="button">Learn more</a> <!-- styled as button -->
+                </div>
             </div>
         </section>
         <section id="news">

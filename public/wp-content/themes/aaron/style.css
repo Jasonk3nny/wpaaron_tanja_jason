@@ -281,7 +281,6 @@ header {
   background-color: black;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url(./images/header-image-2.jpg);
 }
 header h1 {
   max-width: 30rem;
@@ -323,7 +322,7 @@ header h1 {
   header {
     background-size: auto;
     background-position: right top;
-    height: 70vh;
+    height: 80vh;
     background-image: url(./images/header-image-2.jpg);
     background-position-x: 95%;
     background-position-y: 10%;
@@ -960,8 +959,8 @@ header h1 {
   background-color: hsl(23deg, 100%, 97%);
 }
 #about p {
-  margin-left: 1rem;
-  margin-bottom: 1.5rem;
+  margin-left: 1.2rem;
+  margin-top: 32px;
   font-weight: 200;
   line-height: 1.6rem;
   font-size: 0.9rem;
@@ -1004,6 +1003,9 @@ header h1 {
     margin-bottom: 8rem;
     min-height: 70vh;
   }
+  #about .about-container {
+    display: flex;
+  }
   #about img {
     width: 50%;
     object-fit: cover;
@@ -1023,7 +1025,7 @@ header h1 {
     margin-top: 0;
   }
   #about p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 2.5rem;
     max-width: 100%;
@@ -1133,6 +1135,9 @@ header h1 {
   #news h3 {
     font-weight: 200;
     padding-top: 0.4rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     margin: 1rem;
     font-size: 1.75rem;
     color: hsl(26deg, 82%, 65%);
@@ -1141,7 +1146,7 @@ header h1 {
     color: hsl(26deg, 82%, 65%);
   }
   #news article {
-    max-width: 80%;
+    width: calc(33.3333% - 32px);
     max-height: 80%;
     display: flex;
     flex-direction: column;
