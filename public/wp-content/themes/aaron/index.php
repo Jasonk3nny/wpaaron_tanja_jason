@@ -134,7 +134,7 @@
                 <div class="about-text">
 
                     <?php
-                    $aboutme_query = new WP_Query(array('p' => 20));
+                    $aboutme_query = new WP_Query(array('p' => 13));
                     if ($aboutme_query->have_posts()) :
                         while ($aboutme_query->have_posts()) : $aboutme_query->the_post(); ?>
                             <article>
