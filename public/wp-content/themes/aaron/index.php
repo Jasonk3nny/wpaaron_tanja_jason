@@ -94,7 +94,7 @@
                         </div>
                     </div>
                 </div>
-                <p class='apply-2'>Registration now open for everybody!</p>
+                <p class='apply-2'>Re&shy;gis&shy;tra&shy;tion now open for every&shy;body!</p>
 
                 <div class="level-3">
                     <p class="number-desktop">1</p>
@@ -134,30 +134,21 @@
                 <div class="about-text">
 
                     <?php
-                    $aboutme_query = new WP_Query(array('p' => 13));
+                    $aboutme_query = new WP_Query(array('p' => 20));
                     if ($aboutme_query->have_posts()) :
                         while ($aboutme_query->have_posts()) : $aboutme_query->the_post(); ?>
                             <article>
-                                <p class="super-headline">Why I teach</p>
+                                <p class="super-headline"><?php echo get_post_custom_values('super-headline')[0]; ?></p>
                                 <h2>
-                                    <a href="<?php the_permalink(); ?>">
-                                        <?php the_title(); ?>
-                                    </a>
+                                    <?php the_title(); ?>
                                 </h2>
-                                <p><?php the_content(); ?></p>
-
+                                <?php the_content(); ?>
+                                <a class="button">Learn more</a>
                             </article>
 
                         <?php endwhile; ?>
                     <?php endif; ?>
                     <?php wp_reset_postdata(); ?>
-                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil, recusandae
-                        autem aut perferendis reiciendis a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur
-                        asperiores consequatur consectetur ipsum!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil, recusandae
-                        autem aut perferendis reiciendis a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur
-                        asperiores consequatur consectetur ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil, recusandae autem aut perferendis reiciendis a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur asperiores consequatur consectetur ipsum!</p> -->
-                    <a class="button">Learn more</a> <!-- styled as button -->
                 </div>
             </div>
         </section>
