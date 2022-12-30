@@ -57,14 +57,14 @@
                 $level_query = new WP_Query(array('category_name' => 'level', 'order' => 'ASC'));
                 if ($level_query->have_posts()) :
                     while ($level_query->have_posts()) : $level_query->the_post(); ?>
-                        <div class="level-1">
+                        <div class="level-<?php echo get_post_custom_values('Level')[0]; ?>">
                             <?php
                             if (has_post_thumbnail()) {
                                 the_post_thumbnail();
                             }
                             ?>
                             <p class="number-desktop"><?php echo get_post_custom_values('Level')[0]; ?></p>
-                            <div class="step-1-container">
+                            <div class="step-<?php echo get_post_custom_values('Level')[0]; ?>-container">
                                 <div class="icon-container">
                                     <?php the_post_thumbnail(); ?>
                                     <div><img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/stretch.svg" alt='Icon showing dancer stretching her leg up to her nose.'></div>
@@ -75,14 +75,14 @@
                                     <?php the_content(); ?>
                                     <a href="#" class="button">Book Workshop</a>
                                 </div>
-                                <div class="quote-1">
+                                <div class="quote-<?php echo get_post_custom_values('Level')[0]; ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/quote.svg" alt='quote sign'>
                                     <blockquote><?php echo get_post_custom_values('Level Slogan')[0]; ?></blockquote>
                                 </div>
                             </div>
                         </div>
 
-                        <p class='apply-1'><?php echo get_post_custom_values('apply')[0]; ?></p>
+                        <p class='apply-<?php echo get_post_custom_values('Level')[0]; ?>'><?php echo get_post_custom_values('apply')[0]; ?></p>
                     <?php endwhile; ?>
                 <?php endif; ?>
                 <?php wp_reset_postdata(); ?>
