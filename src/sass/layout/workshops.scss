@@ -27,7 +27,7 @@
             width: 100%;
     
     
-                .apply-3{
+                .apply-1{
                     writing-mode: vertical-rl;
                     transform: rotate(180deg);
                     grid-column-start: 2;
@@ -53,7 +53,7 @@
                     padding-top: 8px;
                 }
     
-                .apply-1{
+                .apply-3{
                     writing-mode: vertical-rl;
                     transform: rotate(180deg);
                     grid-column-start: 2;
@@ -68,7 +68,7 @@
       
         }
     
-        .level-3{ 
+        .level-1{ 
             background-color: $bggray;
             margin-top: 6rem;
             grid-column-start: 1;
@@ -230,7 +230,7 @@
             }
     
         }
-        .level-1{ 
+        .level-3{ 
             background-color: $bggray;
             margin-top: 6rem;
             grid-column-start: 1;
@@ -349,7 +349,7 @@
             margin-left: 1rem;
         }
     
-        .level-3{
+        .level-1{
             grid-column: 1/ span 1;
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -365,7 +365,7 @@
                 transform: translateX(19px);
             }
     
-            .step-3-container{
+            .step-1-container{
                 grid-column: 2/ span 1;
                 background-color: $bggray;
                 display: grid;
@@ -410,7 +410,7 @@
                         font-size: 2rem;
                     }
                 }
-                .quote-3{
+                .quote-1{
                     grid-column: 3/ span 1;
                     grid-row: 1/ span 1;
                     display: flex;
@@ -530,7 +530,7 @@
                 }
             }
     
-                .level-1{
+                .level-3{
                     grid-column: 1/ span 1;
                     display: grid;
                     grid-template-columns: 1fr auto 1fr;
@@ -546,7 +546,7 @@
                         transform: translateX(19px);
                     }
             
-                    .step-1-container{
+                    .step-3-container{
                         grid-column: 2/ span 1;
                         background-color: $bggray;
                         display: grid;
@@ -591,7 +591,7 @@
                                 font-size: 2rem;
                             }
                         }
-                        .quote-1{
+                        .quote-3{
                             grid-column: 3/ span 1;
                             grid-row: 1/ span 1;
                             display: flex;
@@ -619,7 +619,7 @@
                         }
                     }
                 }
-                .apply-3{
+                .apply-1{
                     grid-column: 2/ span 1;
                     display: flex;
                     align-items: center;
@@ -645,7 +645,7 @@
                     height: 100%;
                 }
             
-                .apply-1{
+                .apply-3{
                     display: none;
                 }
         }
