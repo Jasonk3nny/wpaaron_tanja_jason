@@ -47,18 +47,6 @@
 
     <main>
 
-        <?php
-        if (have_posts()) {
-            while (have_posts()) {
-                the_post();
-                the_title();
-                the_content();
-            }
-        } else {
-            // currently no posts
-        }
-        ?>
-
         <section id="workshops">
             <p class="super-headline">Find your entrance level & book a workshop with Aaron</p>
             <h2>If you never start, you will never know.</h2>
@@ -146,7 +134,7 @@
                 <div class="about-text">
 
                     <?php
-                    $aboutme_query = new WP_Query(array('p' => 20));
+                    $aboutme_query = new WP_Query(array('p' => 13));
                     if ($aboutme_query->have_posts()) :
                         while ($aboutme_query->have_posts()) : $aboutme_query->the_post(); ?>
                             <article>
