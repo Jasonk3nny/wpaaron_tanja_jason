@@ -54,7 +54,7 @@
             <div class="grid-wrapper">
                 <?php
                 // Workshop Query
-                $level_query = new WP_Query(array('category_name' => 'level'));
+                $level_query = new WP_Query(array('category_name' => 'level', 'order' => 'DESC'));
                 if ($level_query->have_posts()) :
                     while ($level_query->have_posts()) : $level_query->the_post(); ?>
                         <div class="level-1">
@@ -81,56 +81,12 @@
                                 </div>
                             </div>
                         </div>
+
+                        <p class='apply-1'><?php echo get_post_custom_values('apply')[0]; ?></p>
                     <?php endwhile; ?>
                 <?php endif; ?>
                 <?php wp_reset_postdata(); ?>
-                <p class='apply-1'>Apply for an audition now!</p>
-
-                <div class="level-2">
-                    <p class="number-desktop">2</p>
-                    <div class="step-2-container">
-                        <div class="icon-container">
-                            <div><img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/up.svg" alt='Icon showing dancer stretching her leg up to her nose.'></div>
-                            <p class="number-mobile">2</p>
-                        </div>
-                        <div>
-                            <h3>Aspire more</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua. Ut enim ad minim</p>
-                            <a href="#" class="button">Book Workshop</a>
-                        </div>
-                        <div class="quote-2">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/quote.svg" alt='quote sign'>
-                            <blockquote>Thank <br> yourself for levelling up now!</blockquote>
-                        </div>
-                    </div>
-                </div>
-                <p class='apply-2'>Re&shy;gis&shy;tra&shy;tion now open for every&shy;body!</p>
-
-                <div class="level-3">
-                    <p class="number-desktop">1</p>
-                    <div class="step-3-container">
-                        <div class="icon-container">
-                            <div><img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/rise.svg" alt='Icon showing dancer stretching her leg up to her nose.'></div>
-                        </div>
-                        <p class="number-mobile">1</p>
-                        <div>
-                            <h3>Learn the basics profoundly</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua. Ut enim ad minim</p>
-                            <a href="#" class="button">Book Workshop</a>
-                        </div>
-                        <div class="quote-3">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/quote.svg" alt='quote sign'>
-                            <blockquote>Fall in love with dancing!</blockquote>
-                        </div>
-                    </div>
-                </div>
-                <p class='apply-3'>Registration now open for everybody!</p>
             </div>
-
         </section>
         <section id="about">
             <div class="about-container">
