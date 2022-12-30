@@ -17,7 +17,7 @@
     <meta name="keywords" content="Choreographer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aaron G. Miller | Choreographer</title>
-    <link rel="icon" type="image/svg+xml" href="<?php echo get_template_directory_uri();?>/favicons/upfav.svg">
+    <link rel="icon" type="image/svg+xml" href="<?php echo get_template_directory_uri(); ?>/favicons/upfav.svg">
     <?php wp_head(); ?>
 </head>
 
@@ -46,6 +46,19 @@
     </header>
 
     <main>
+
+        <?php
+        if (have_posts()) {
+            while (have_posts()) {
+                the_post();
+                the_title();
+                the_content();
+            }
+        } else {
+            // currently no posts
+        }
+        ?>
+
         <section id="workshops">
             <p class="super-headline">Find your entrance level & book a workshop with Aaron</p>
             <h2>If you never start, you will never know.</h2>
@@ -55,8 +68,7 @@
                     <p class="number-desktop">3</p>
                     <div class="step-1-container">
                         <div class="icon-container">
-                            <div><img class="icon" src="<?php echo get_template_directory_uri();?>/images/stretch.svg"
-                                alt='Icon showing dancer stretching her leg up to her nose.'></div>
+                            <div><img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/stretch.svg" alt='Icon showing dancer stretching her leg up to her nose.'></div>
                             <p class="number-mobile">3</p>
                         </div>
                         <div>
@@ -67,7 +79,7 @@
                             <a href="#" class="button">Book Workshop</a>
                         </div>
                         <div class="quote-1">
-                            <img src="<?php echo get_template_directory_uri();?>/images/quote.svg" alt='quote sign'>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/quote.svg" alt='quote sign'>
                             <blockquote>Respect your talent!</blockquote>
                         </div>
                     </div>
@@ -78,8 +90,7 @@
                     <p class="number-desktop">2</p>
                     <div class="step-2-container">
                         <div class="icon-container">
-                            <div><img class="icon" src="<?php echo get_template_directory_uri();?>/images/up.svg"
-                                alt='Icon showing dancer stretching her leg up to her nose.'></div>
+                            <div><img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/up.svg" alt='Icon showing dancer stretching her leg up to her nose.'></div>
                             <p class="number-mobile">2</p>
                         </div>
                         <div>
@@ -90,7 +101,7 @@
                             <a href="#" class="button">Book Workshop</a>
                         </div>
                         <div class="quote-2">
-                            <img src="<?php echo get_template_directory_uri();?>/images/quote.svg" alt='quote sign'>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/quote.svg" alt='quote sign'>
                             <blockquote>Thank <br> yourself for levelling up now!</blockquote>
                         </div>
                     </div>
@@ -101,8 +112,7 @@
                     <p class="number-desktop">1</p>
                     <div class="step-3-container">
                         <div class="icon-container">
-                            <div><img class="icon" src="<?php echo get_template_directory_uri();?>/images/rise.svg"
-                                alt='Icon showing dancer stretching her leg up to her nose.'></div>
+                            <div><img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/rise.svg" alt='Icon showing dancer stretching her leg up to her nose.'></div>
                         </div>
                         <p class="number-mobile">1</p>
                         <div>
@@ -113,7 +123,7 @@
                             <a href="#" class="button">Book Workshop</a>
                         </div>
                         <div class="quote-3">
-                            <img src="<?php echo get_template_directory_uri();?>/images/quote.svg" alt='quote sign'>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/quote.svg" alt='quote sign'>
                             <blockquote>Fall in love with dancing!</blockquote>
                         </div>
                     </div>
@@ -124,28 +134,41 @@
         </section>
         <section id="about">
             <div class="about-container">
-                <img 
-                    sizes="(max-width: 643px) 100vw, 643px"
-                    srcset="
-                        <?php echo get_template_directory_uri();?>/images/aaron_w_200.png 200w,
-                        <?php echo get_template_directory_uri();?>/images/aaron_w_301.png 301w,
-                        <?php echo get_template_directory_uri();?>/images/aaron_w_387.png 387w,
-                        <?php echo get_template_directory_uri();?>/images/aaron_w_454.png 454w,
-                        <?php echo get_template_directory_uri();?>/images/aaron_w_512.png 512w,
-                        <?php echo get_template_directory_uri();?>/images/aaron_w_562.png 562w,
-                        <?php echo get_template_directory_uri();?>/images/aaron_w_614.png 614w,
-                        <?php echo get_template_directory_uri();?>/images/aaron_w_643.png 643w"
-                    src="<?php echo get_template_directory_uri();?>/images/aaron_w_643.png"
-                    alt="This is me" />
+                <img sizes="(max-width: 643px) 100vw, 643px" srcset="
+                        <?php echo get_template_directory_uri(); ?>/images/aaron_w_200.png 200w,
+                        <?php echo get_template_directory_uri(); ?>/images/aaron_w_301.png 301w,
+                        <?php echo get_template_directory_uri(); ?>/images/aaron_w_387.png 387w,
+                        <?php echo get_template_directory_uri(); ?>/images/aaron_w_454.png 454w,
+                        <?php echo get_template_directory_uri(); ?>/images/aaron_w_512.png 512w,
+                        <?php echo get_template_directory_uri(); ?>/images/aaron_w_562.png 562w,
+                        <?php echo get_template_directory_uri(); ?>/images/aaron_w_614.png 614w,
+                        <?php echo get_template_directory_uri(); ?>/images/aaron_w_643.png 643w" src="<?php echo get_template_directory_uri(); ?>/images/aaron_w_643.png" alt="This is me" />
                 <div class="about-text">
-                    <p class="super-headline">Why I teach</p>
-                    <h2>Hi, I'm Aaron!</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil, recusandae
+
+                    <?php
+                    $aboutme_query = new WP_Query(array('p' => 20));
+                    if ($aboutme_query->have_posts()) :
+                        while ($aboutme_query->have_posts()) : $aboutme_query->the_post(); ?>
+                            <article>
+                                <p class="super-headline">Why I teach</p>
+                                <h2>
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php the_title(); ?>
+                                    </a>
+                                </h2>
+                                <p><?php the_content(); ?></p>
+
+                            </article>
+
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata(); ?>
+                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil, recusandae
                         autem aut perferendis reiciendis a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur
                         asperiores consequatur consectetur ipsum!</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil, recusandae
                         autem aut perferendis reiciendis a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur
-                        asperiores consequatur consectetur ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil, recusandae autem aut perferendis reiciendis a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur asperiores consequatur consectetur ipsum!</p>
+                        asperiores consequatur consectetur ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil, recusandae autem aut perferendis reiciendis a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur asperiores consequatur consectetur ipsum!</p> -->
                     <a class="button">Learn more</a> <!-- styled as button -->
                 </div>
             </div>
@@ -156,16 +179,12 @@
             <div class="flex-wrapper">
                 <article>
                     <h3>Sydney Dance Festival 2022</h3>
-                    <img 
-                        sizes="(max-width: 1024px) 100vw, 1024px"
-                        srcset="
-                            <?php echo get_template_directory_uri();?>/images/dance_festival_performance_w_200.jpg 200w,
-                            <?php echo get_template_directory_uri();?>/images/dance_festival_performance_w_683.jpg 683w,
-                            <?php echo get_template_directory_uri();?>/images/dance_festival_performance_w_914.jpg 914w,
-                            <?php echo get_template_directory_uri();?>/images/dance_festival_performance_w_1004.jpg 1004w,
-                            <?php echo get_template_directory_uri();?>/images/dance_festival_performance_w_1024.jpg 1024w"
-                        src="<?php echo get_template_directory_uri();?>/images/dance_festival_performance_w_1024.jpg"
-                        alt="Aaron performing at the Sydney dance festival 2022">
+                    <img sizes="(max-width: 1024px) 100vw, 1024px" srcset="
+                            <?php echo get_template_directory_uri(); ?>/images/dance_festival_performance_w_200.jpg 200w,
+                            <?php echo get_template_directory_uri(); ?>/images/dance_festival_performance_w_683.jpg 683w,
+                            <?php echo get_template_directory_uri(); ?>/images/dance_festival_performance_w_914.jpg 914w,
+                            <?php echo get_template_directory_uri(); ?>/images/dance_festival_performance_w_1004.jpg 1004w,
+                            <?php echo get_template_directory_uri(); ?>/images/dance_festival_performance_w_1024.jpg 1024w" src="<?php echo get_template_directory_uri(); ?>/images/dance_festival_performance_w_1024.jpg" alt="Aaron performing at the Sydney dance festival 2022">
                     <p>
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                         sed diam nonumy eirmod tempor invidunt ut labore et
@@ -178,16 +197,12 @@
 
                 <article>
                     <h3>"Dance Pool" 2023 sold out!</h3>
-                    <img 
-                    sizes="(max-width: 1024px) 100vw, 1024px"
-                    srcset="
-                        <?php echo get_template_directory_uri();?>/images/dance_pool_group_pic_w_200.jpg 200w,
-                        <?php echo get_template_directory_uri();?>/images/dance_pool_group_pic_w_557.jpg 557w,
-                        <?php echo get_template_directory_uri();?>/images/dance_pool_group_pic_w_781.jpg 781w,
-                        <?php echo get_template_directory_uri();?>/images/dance_pool_group_pic_w_963.jpg 963w,
-                        <?php echo get_template_directory_uri();?>/images/dance_pool_group_pic_w_1024.jpg 1024w"
-                    src="<?php echo get_template_directory_uri();?>/images/dance_pool_group_pic_w_1024.jpg" 
-                    alt="Group picture of 'Dance Pool'">
+                    <img sizes="(max-width: 1024px) 100vw, 1024px" srcset="
+                        <?php echo get_template_directory_uri(); ?>/images/dance_pool_group_pic_w_200.jpg 200w,
+                        <?php echo get_template_directory_uri(); ?>/images/dance_pool_group_pic_w_557.jpg 557w,
+                        <?php echo get_template_directory_uri(); ?>/images/dance_pool_group_pic_w_781.jpg 781w,
+                        <?php echo get_template_directory_uri(); ?>/images/dance_pool_group_pic_w_963.jpg 963w,
+                        <?php echo get_template_directory_uri(); ?>/images/dance_pool_group_pic_w_1024.jpg 1024w" src="<?php echo get_template_directory_uri(); ?>/images/dance_pool_group_pic_w_1024.jpg" alt="Group picture of 'Dance Pool'">
                     <p>
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                         sed diam nonumy eirmod tempor invidunt ut labore et
@@ -200,15 +215,12 @@
 
                 <article>
                     <h3>New London Workshop Oct. 2025</h3>
-                    <img sizes="(max-width: 1024px) 100vw, 1024px"
-                        srcset="
-                            <?php echo get_template_directory_uri();?>/images/workshop_snapshot_w_200.jpg 200w,
-                            <?php echo get_template_directory_uri();?>/images/workshop_snapshot_w_603.jpg 603w,
-                            <?php echo get_template_directory_uri();?>/images/workshop_snapshot_w_812.jpg 812w,
-                            <?php echo get_template_directory_uri();?>/images/workshop_snapshot_w_981.jpg 981w,
-                            <?php echo get_template_directory_uri();?>/images/workshop_snapshot_w_1024.jpg 1024w"
-                        src="<?php echo get_template_directory_uri();?>/images/workshop_snapshot_w_1024.jpg" 
-                        alt="Aaron at a workshop">
+                    <img sizes="(max-width: 1024px) 100vw, 1024px" srcset="
+                            <?php echo get_template_directory_uri(); ?>/images/workshop_snapshot_w_200.jpg 200w,
+                            <?php echo get_template_directory_uri(); ?>/images/workshop_snapshot_w_603.jpg 603w,
+                            <?php echo get_template_directory_uri(); ?>/images/workshop_snapshot_w_812.jpg 812w,
+                            <?php echo get_template_directory_uri(); ?>/images/workshop_snapshot_w_981.jpg 981w,
+                            <?php echo get_template_directory_uri(); ?>/images/workshop_snapshot_w_1024.jpg 1024w" src="<?php echo get_template_directory_uri(); ?>/images/workshop_snapshot_w_1024.jpg" alt="Aaron at a workshop">
                     <p>
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                         sed diam nonumy eirmod tempor invidunt ut labore et
@@ -228,7 +240,7 @@
         <a href="#">Imprint & Privacy</a>
     </footer>
     <script>
-        document.addEventListener("DOMContentLoaded", function (event) {
+        document.addEventListener("DOMContentLoaded", function(event) {
             // MainNav.init();
         });
     </script>
