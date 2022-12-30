@@ -24,6 +24,7 @@
 <body>
     <?php wp_body_open(); ?>
     <header>
+
         <a href="/">
             <h1>Aaron G. Miller | <span style="font-weight: 300; text-transform: none;">Choreographer</span> </h1>
         </a>
@@ -40,8 +41,20 @@
             </ul>
         </nav>
         <div class="believe">
-            <h2>I believe you can dance.</h2>
-            <a href="#" class="button">Book Workshop</a>
+            <?php
+            $header_query = new WP_Query(array('p' => 30));
+            if ($header_query->have_posts()) :
+                while ($header_query->have_posts()) : $header_query->the_post(); ?>
+                    <h2>
+                        <?php the_title(); ?>
+                    </h2>
+                    <a href="#" class="button">Book Workshop</a>
+
+                <?php endwhile; ?>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
+
+
         </div>
     </header>
 
@@ -88,6 +101,7 @@
                 <?php wp_reset_postdata(); ?>
             </div>
         </section>
+
         <section id="about">
             <div class="about-container">
                 <img sizes="(max-width: 643px) 100vw, 643px" srcset="

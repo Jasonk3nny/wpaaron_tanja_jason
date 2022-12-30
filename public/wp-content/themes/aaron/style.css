@@ -294,7 +294,6 @@ header h1 {
   header {
     background-size: contain;
     height: 25rem;
-    background-image: url(./images/header-image-2.jpg);
   }
   header h1 {
     font-size: 0.7rem;
