@@ -52,26 +52,38 @@
             <h2>If you never start, you will never know.</h2>
 
             <div class="grid-wrapper">
-                <div class="level-1">
-                    <p class="number-desktop">3</p>
-                    <div class="step-1-container">
-                        <div class="icon-container">
-                            <div><img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/stretch.svg" alt='Icon showing dancer stretching her leg up to her nose.'></div>
-                            <p class="number-mobile">3</p>
+                <?php
+                // Workshop Query
+                $level_query = new WP_Query(array('category_name' => 'level'));
+                if ($level_query->have_posts()) :
+                    while ($level_query->have_posts()) : $level_query->the_post(); ?>
+                        <div class="level-1">
+                            <?php
+                            if (has_post_thumbnail()) {
+                                the_post_thumbnail();
+                            }
+                            ?>
+                            <p class="number-desktop"><?php echo get_post_custom_values('Level')[0]; ?></p>
+                            <div class="step-1-container">
+                                <div class="icon-container">
+                                    <?php the_post_thumbnail(); ?>
+                                    <div><img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/stretch.svg" alt='Icon showing dancer stretching her leg up to her nose.'></div>
+                                    <p class="number-mobile"><?php echo get_post_custom_values('Level')[0]; ?></p>
+                                </div>
+                                <div>
+                                    <h3><?php the_title(); ?></h3>
+                                    <?php the_content(); ?>
+                                    <a href="#" class="button">Book Workshop</a>
+                                </div>
+                                <div class="quote-1">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/quote.svg" alt='quote sign'>
+                                    <blockquote><?php echo get_post_custom_values('Level Slogan')[0]; ?></blockquote>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h3>As pro as you can get</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua. Ut enim ad minim </p>
-                            <a href="#" class="button">Book Workshop</a>
-                        </div>
-                        <div class="quote-1">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/quote.svg" alt='quote sign'>
-                            <blockquote>Respect your talent!</blockquote>
-                        </div>
-                    </div>
-                </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+                <?php wp_reset_postdata(); ?>
                 <p class='apply-1'>Apply for an audition now!</p>
 
                 <div class="level-2">
