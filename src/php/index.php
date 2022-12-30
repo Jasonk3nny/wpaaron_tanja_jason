@@ -54,7 +54,7 @@
             <div class="grid-wrapper">
                 <?php
                 // Workshop Query
-                $level_query = new WP_Query(array('category_name' => 'level'));
+                $level_query = new WP_Query(array('category_name' => 'level', 'order' => 'ASC'));
                 if ($level_query->have_posts()) :
                     while ($level_query->have_posts()) : $level_query->the_post(); ?>
                         <div class="level-<?php echo get_post_custom_values('Level')[0]; ?>">
