@@ -42,7 +42,7 @@
         </nav>
         <div class="believe">
             <?php
-            $header_query = new WP_Query(array('p' => 30));
+            $header_query = new WP_Query(array('p' => 36));
             if ($header_query->have_posts()) :
                 while ($header_query->have_posts()) : $header_query->the_post();
                     if (has_post_thumbnail()) { ?>
@@ -143,59 +143,24 @@
             <p class="super-headline">Making waves since 2004</p>
             <h2>In the News</h2>
             <div class="flex-wrapper">
-                <article>
-                    <h3>Sydney Dance Festival 2022</h3>
-                    <img sizes="(max-width: 1024px) 100vw, 1024px" srcset="
-                            <?php echo get_template_directory_uri(); ?>/images/dance_festival_performance_w_200.jpg 200w,
-                            <?php echo get_template_directory_uri(); ?>/images/dance_festival_performance_w_683.jpg 683w,
-                            <?php echo get_template_directory_uri(); ?>/images/dance_festival_performance_w_914.jpg 914w,
-                            <?php echo get_template_directory_uri(); ?>/images/dance_festival_performance_w_1004.jpg 1004w,
-                            <?php echo get_template_directory_uri(); ?>/images/dance_festival_performance_w_1024.jpg 1024w" src="<?php echo get_template_directory_uri(); ?>/images/dance_festival_performance_w_1024.jpg" alt="Aaron performing at the Sydney dance festival 2022">
-                    <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam nonumy eirmod tempor invidunt ut labore et
-                        dolore magna aliquyam erat, sed diam voluptua. At vero
-                        eos et accusam et justo duo dolores et ea rebum. Stet
-                        clita kasd gubergren, no sea takimata sanctus est.
-                    </p>
-                    <a href="#" class="button">Read more</a>
-                </article>
+                <?php
+                $news_query = new WP_Query(array('category_name' => 'news'));
+                if ($news_query->have_posts()) :
+                    while ($news_query->have_posts()) : $news_query->the_post(); ?>
 
-                <article>
-                    <h3>"Dance Pool" 2023 sold out!</h3>
-                    <img sizes="(max-width: 1024px) 100vw, 1024px" srcset="
-                        <?php echo get_template_directory_uri(); ?>/images/dance_pool_group_pic_w_200.jpg 200w,
-                        <?php echo get_template_directory_uri(); ?>/images/dance_pool_group_pic_w_557.jpg 557w,
-                        <?php echo get_template_directory_uri(); ?>/images/dance_pool_group_pic_w_781.jpg 781w,
-                        <?php echo get_template_directory_uri(); ?>/images/dance_pool_group_pic_w_963.jpg 963w,
-                        <?php echo get_template_directory_uri(); ?>/images/dance_pool_group_pic_w_1024.jpg 1024w" src="<?php echo get_template_directory_uri(); ?>/images/dance_pool_group_pic_w_1024.jpg" alt="Group picture of 'Dance Pool'">
-                    <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam nonumy eirmod tempor invidunt ut labore et
-                        dolore magna aliquyam erat, sed diam voluptua. At vero
-                        eos et accusam et justo duo dolores et ea rebum. Stet
-                        clita kasd gubergren, no sea takimata sanctus est.
-                    </p>
-                    <a href="#" class="button">Read more</a>
-                </article>
-
-                <article>
-                    <h3>New London Workshop Oct. 2025</h3>
-                    <img sizes="(max-width: 1024px) 100vw, 1024px" srcset="
-                            <?php echo get_template_directory_uri(); ?>/images/workshop_snapshot_w_200.jpg 200w,
-                            <?php echo get_template_directory_uri(); ?>/images/workshop_snapshot_w_603.jpg 603w,
-                            <?php echo get_template_directory_uri(); ?>/images/workshop_snapshot_w_812.jpg 812w,
-                            <?php echo get_template_directory_uri(); ?>/images/workshop_snapshot_w_981.jpg 981w,
-                            <?php echo get_template_directory_uri(); ?>/images/workshop_snapshot_w_1024.jpg 1024w" src="<?php echo get_template_directory_uri(); ?>/images/workshop_snapshot_w_1024.jpg" alt="Aaron at a workshop">
-                    <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam nonumy eirmod tempor invidunt ut labore et
-                        dolore magna aliquyam erat, sed diam voluptua. At vero
-                        eos et accusam et justo duo dolores et ea rebum. Stet
-                        clita kasd gubergren, no sea takimata sanctus est.
-                    </p>
-                    <a href="#" class="button">Read more</a>
-                </article>
+                        <article>
+                            <h3><?php the_title(); ?></h3>
+                            <?php
+                            if (has_post_thumbnail()) {
+                                the_post_thumbnail();
+                            }
+                            ?>
+                            <?php the_content(); ?>
+                            <a href="#" class="button">Read more</a>
+                        </article>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+                <?php wp_reset_postdata(); ?>
             </div>
         </section>
     </main>
