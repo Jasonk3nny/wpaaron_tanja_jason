@@ -140,8 +140,18 @@
             </div>
         </section>
         <section id="news">
-            <p class="super-headline">Making waves since 2004</p>
-            <h2>In the News</h2>
+            <?php
+            $newsheader_query = new WP_Query(array('p' => 42));
+            if ($newsheader_query->have_posts()) :
+                while ($newsheader_query->have_posts()) : $newsheader_query->the_post(); ?>
+                    <p class="super-headline"><?php echo get_post_custom_values('super-headline')[0]; ?></p>
+                    <h2>
+                        <?php the_title(); ?>
+                    </h2>
+                <?php endwhile; ?>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
+
             <div class="flex-wrapper">
                 <?php
                 $news_query = new WP_Query(array('category_name' => 'news'));
