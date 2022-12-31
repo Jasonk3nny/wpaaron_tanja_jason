@@ -278,10 +278,8 @@ footer a {
   }
 }
 header {
-  background-color: black;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url(./images/header-image-2.jpg);
 }
 header h1 {
   max-width: 30rem;
@@ -295,7 +293,6 @@ header h1 {
   header {
     background-size: contain;
     height: 25rem;
-    background-image: url(./images/header-image-2.jpg);
   }
   header h1 {
     font-size: 0.7rem;
@@ -324,10 +321,9 @@ header h1 {
     background-size: auto;
     background-position: right top;
     height: 80vh;
-    background-image: url(./images/header-image-2.jpg);
     background-position-x: 95%;
     background-position-y: 10%;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
   }
   header h1 {
     font-size: 1.125rem;

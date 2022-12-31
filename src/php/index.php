@@ -42,9 +42,14 @@
         </nav>
         <div class="believe">
             <?php
-            $header_query = new WP_Query(array('p' => 30));
+            $header_query = new WP_Query(array('p' => 36));
             if ($header_query->have_posts()) :
-                while ($header_query->have_posts()) : $header_query->the_post(); ?>
+                while ($header_query->have_posts()) : $header_query->the_post();
+                    if (has_post_thumbnail()) { ?>
+                        <img style="size: auto; position: absolute; top: 0; left: 0; z-index:-1; width: 100%;" src="<?php the_post_thumbnail(); ?>">
+                    <?php
+                    } ?>
+
                     <h2>
                         <?php the_title(); ?>
                     </h2>
