@@ -109,21 +109,16 @@
 
         <section id="about">
             <div class="about-container">
-                <img sizes="(max-width: 643px) 100vw, 643px" srcset="
-                        <?php echo get_template_directory_uri(); ?>/images/aaron_w_200.png 200w,
-                        <?php echo get_template_directory_uri(); ?>/images/aaron_w_301.png 301w,
-                        <?php echo get_template_directory_uri(); ?>/images/aaron_w_387.png 387w,
-                        <?php echo get_template_directory_uri(); ?>/images/aaron_w_454.png 454w,
-                        <?php echo get_template_directory_uri(); ?>/images/aaron_w_512.png 512w,
-                        <?php echo get_template_directory_uri(); ?>/images/aaron_w_562.png 562w,
-                        <?php echo get_template_directory_uri(); ?>/images/aaron_w_614.png 614w,
-                        <?php echo get_template_directory_uri(); ?>/images/aaron_w_643.png 643w" src="<?php echo get_template_directory_uri(); ?>/images/aaron_w_643.png" alt="This is me" />
-                <div class="about-text">
-
-                    <?php
-                    $aboutme_query = new WP_Query(array('p' => 13));
-                    if ($aboutme_query->have_posts()) :
-                        while ($aboutme_query->have_posts()) : $aboutme_query->the_post(); ?>
+                <?php
+                $aboutme_query = new WP_Query(array('p' => 20));
+                if ($aboutme_query->have_posts()) :
+                    while ($aboutme_query->have_posts()) : $aboutme_query->the_post(); ?>
+                        <?php
+                        if (has_post_thumbnail()) {
+                            the_post_thumbnail();
+                        }
+                        ?>
+                        <div class="about-text">
                             <article>
                                 <p class="super-headline"><?php echo get_post_custom_values('super-headline')[0]; ?></p>
                                 <h2>
@@ -136,7 +131,7 @@
                         <?php endwhile; ?>
                     <?php endif; ?>
                     <?php wp_reset_postdata(); ?>
-                </div>
+                        </div>
             </div>
         </section>
         <section id="news">
