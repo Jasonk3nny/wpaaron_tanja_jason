@@ -42,7 +42,7 @@
         </nav>
         <div class="believe">
             <?php
-            $header_query = new WP_Query(array('p' => 36));
+            $header_query = new WP_Query(array('p' => 30));
             if ($header_query->have_posts()) :
                 while ($header_query->have_posts()) : $header_query->the_post();
                     if (has_post_thumbnail()) { ?>
