@@ -77,8 +77,6 @@
                 <?php endwhile; ?>
             <?php endif; ?>
             <?php wp_reset_postdata(); ?>
-            <p class="super-headline">Find your entrance level & book a workshop with Aaron</p>
-            <h2>If you never start, you will never know.</h2>
 
             <div class="grid-wrapper">
                 <?php

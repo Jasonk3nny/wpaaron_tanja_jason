@@ -66,8 +66,17 @@
     <main>
 
         <section id="workshops">
-            <p class="super-headline">Find your entrance level & book a workshop with Aaron</p>
-            <h2>If you never start, you will never know.</h2>
+            <?php
+            $header_query = new WP_Query(array('p' => 45));
+            if ($header_query->have_posts()) :
+                while ($header_query->have_posts()) : $header_query->the_post(); ?>
+                    <p class="super-headline"><?php echo get_post_custom_values('super-headline')[0]; ?></p>
+                    <h2>
+                        <?php the_title(); ?>
+                    </h2>
+                <?php endwhile; ?>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
 
             <div class="grid-wrapper">
                 <?php
