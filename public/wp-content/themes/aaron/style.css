@@ -493,6 +493,7 @@ header h1 {
   #workshops .level-3 img {
     height: 6rem;
     padding: 1.4rem;
+    width: 6rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -561,6 +562,7 @@ header h1 {
   #workshops .level-2 img {
     height: 6rem;
     padding: 1.4rem;
+    width: 6rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -629,6 +631,7 @@ header h1 {
   #workshops .level-1 img {
     height: 6rem;
     padding: 1.4rem;
+    width: 6rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -713,6 +716,10 @@ header h1 {
     width: 6rem;
     height: 6rem;
   }
+  #workshops .grid-wrapper .level-3 .step-3-container .icon-container .icon img {
+    width: 7rem;
+    height: 7rem;
+  }
   #workshops .grid-wrapper .level-3 .step-3-container p {
     color: white;
     margin: 0.5rem 1rem 1rem 1rem;
@@ -795,6 +802,10 @@ header h1 {
   #workshops .grid-wrapper .level-2 .step-2-container .icon-container .icon {
     width: 6rem;
     height: 6rem;
+  }
+  #workshops .grid-wrapper .level-2 .step-2-container .icon-container .icon img {
+    width: 7rem;
+    height: 7rem;
   }
   #workshops .grid-wrapper .level-2 .step-2-container div {
     grid-column: 3/span 1;
@@ -879,6 +890,10 @@ header h1 {
   #workshops .grid-wrapper .level-1 .step-1-container .icon-container .icon {
     width: 6rem;
     height: 6rem;
+  }
+  #workshops .grid-wrapper .level-1 .step-1-container .icon-container .icon img {
+    width: 7rem;
+    height: 7rem;
   }
   #workshops .grid-wrapper .level-1 .step-1-container div {
     grid-column: 2/span 1;

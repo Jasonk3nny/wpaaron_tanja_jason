@@ -46,7 +46,7 @@
             if ($header_query->have_posts()) :
                 while ($header_query->have_posts()) : $header_query->the_post();
                     if (has_post_thumbnail()) { ?>
-                        <img style="size: auto; position: absolute; top: 0; left: 0; z-index:-1; width: 100%;object-fit: cover;" src="<?php the_post_thumbnail(); ?>">
+                        <img style="position: absolute; top: 0; left: 0; z-index:-1; max-width: fit-content;object-fit: cover;" src="<?php the_post_thumbnail(); ?>">
                     <?php
                     } ?>
 
@@ -85,16 +85,11 @@
                 if ($level_query->have_posts()) :
                     while ($level_query->have_posts()) : $level_query->the_post(); ?>
                         <div class="level-<?php echo get_post_custom_values('Level')[0]; ?>">
-                            <?php
-                            if (has_post_thumbnail()) {
-                                the_post_thumbnail();
-                            }
-                            ?>
+
                             <p class="number-desktop"><?php echo get_post_custom_values('Level')[0]; ?></p>
                             <div class="step-<?php echo get_post_custom_values('Level')[0]; ?>-container">
                                 <div class="icon-container">
-                                    <?php the_post_thumbnail(); ?>
-                                    <div><img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/stretch.svg" alt='Icon showing dancer stretching her leg up to her nose.'></div>
+                                    <div><span class="icon"><?php the_post_thumbnail(); ?></span></div>
                                     <p class="number-mobile"><?php echo get_post_custom_values('Level')[0]; ?></p>
                                 </div>
                                 <div>

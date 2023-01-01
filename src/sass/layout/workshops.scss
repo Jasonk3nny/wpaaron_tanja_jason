@@ -133,7 +133,7 @@
             img{
                 height: 6rem;
                 padding: 1.4rem;
-    
+                width: 6rem;
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
@@ -215,7 +215,7 @@
             img{
                 height: 6rem;
                 padding: 1.4rem;
-    
+                width: 6rem;
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
@@ -297,7 +297,7 @@
             img{
                 height: 6rem;
                 padding: 1.4rem;
-    
+                width: 6rem;
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
@@ -388,6 +388,10 @@
                     .icon{
                         width: 6rem;
                         height: 6rem;
+                        img{
+                            width: 7rem;
+                            height: 7rem;
+                        }
                     }
                 }
                 p{
@@ -478,6 +482,10 @@
                         .icon{
                             width: 6rem;
                             height: 6rem;
+                            img{
+                                width: 7rem;
+                                height: 7rem;
+                            }
                         }
                     }
                     div {
@@ -563,12 +571,16 @@
                             div{
                                 background-color: hsl(0,0%,35%);
                                 border-radius:50%;
-                                padding: 2rem;
+                                padding:2rem;
                                 max-width: fit-content;
                             }
                             .icon{
                                 width: 6rem;
                                 height: 6rem;
+                                img{
+                                    width: 7rem;
+                                    height: 7rem;
+                                }
                             }
                         }
                         div {
