@@ -41,7 +41,7 @@
         </nav>
         <div class="believe">
             <?php
-            $header_query = new WP_Query(array('p' => 36));
+            $header_query = new WP_Query(array('p' => 30));
             if ($header_query->have_posts()) :
                 while ($header_query->have_posts()) : $header_query->the_post();
                     if (has_post_thumbnail()) { ?>
@@ -63,7 +63,7 @@
 
         <section id="workshops">
             <?php
-            $header_query = new WP_Query(array('p' => 52));
+            $header_query = new WP_Query(array('p' => 45));
             if ($header_query->have_posts()) :
                 while ($header_query->have_posts()) : $header_query->the_post(); ?>
                     <p class="super-headline"><?php echo get_post_custom_values('super-headline')[0]; ?></p>
@@ -110,7 +110,7 @@
         <section id="about">
             <div class="about-container">
                 <?php
-                $aboutme_query = new WP_Query(array('p' => 20));
+                $aboutme_query = new WP_Query(array('p' => 13));
                 if ($aboutme_query->have_posts()) :
                     while ($aboutme_query->have_posts()) : $aboutme_query->the_post(); ?>
                         <?php
@@ -136,7 +136,7 @@
         </section>
         <section id="news">
             <?php
-            $newsheader_query = new WP_Query(array('p' => 49));
+            $newsheader_query = new WP_Query(array('p' => 42));
             if ($newsheader_query->have_posts()) :
                 while ($newsheader_query->have_posts()) : $newsheader_query->the_post(); ?>
                     <p class="super-headline"><?php echo get_post_custom_values('super-headline')[0]; ?></p>
