@@ -1,7 +1,7 @@
 header {
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color:transparent;
+    background-color:transparent !important;
 
     h1 {
         max-width: 30rem;
@@ -9,15 +9,14 @@ header {
         color: white;
         text-transform: uppercase; 
         font-size: 300;
+        
     }
 }
 
-
-
 @include breakpoint(0, $mobile) {
 header {
-    background-size: contain;
-    height: 25rem;
+    background-size: auto;
+    height: 32rem;
    
     h1 {
         font-size: 0.7rem;
@@ -37,6 +36,16 @@ header {
             margin-right: 4rem;
             font-weight: 200;
         }
+        img {
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            z-index:-1; 
+            object-fit: cover;
+            max-height: 100%; 
+            width: 140%;
+            background-color:black;
+        }
     }
     .button {
         background-color: black;
@@ -50,14 +59,16 @@ header {
     header {
         background-size: auto;
         background-position: right top;
-        height: 80vh;
+        height: 70vh;
         background-position-x: 95%;
         background-position-y: 10%;
-        margin-bottom: 4rem;
+        
+        
 
         h1 {
             font-size: 1.125rem;
             padding: 1.5rem; 
+            
         }
 
         #mainnav {
@@ -100,10 +111,22 @@ header {
         .believe {
             margin-left: 5rem;
             margin-top: 15rem;
+            
             h2 {
                 font-size: 3.55rem;
                 margin-left: 0;
                 font-weight: 200;
+                
+            }
+            img {
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                z-index:  -1; 
+                object-fit: contain; 
+                max-height: 100%; 
+                width: 100%;
+                background-color:black;
             }
         }
         .button {

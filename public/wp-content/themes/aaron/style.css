@@ -280,7 +280,7 @@ footer a {
 header {
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: transparent;
+  background-color: transparent !important;
 }
 header h1 {
   max-width: 30rem;
@@ -292,8 +292,8 @@ header h1 {
 
 @media (min-width: 0rem) and (max-width: 37.4375rem) {
   header {
-    background-size: contain;
-    height: 25rem;
+    background-size: auto;
+    height: 32rem;
   }
   header h1 {
     font-size: 0.7rem;
@@ -313,6 +313,16 @@ header h1 {
     margin-right: 4rem;
     font-weight: 200;
   }
+  header .believe img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    max-height: 100%;
+    width: 140%;
+    background-color: black;
+  }
   header .button {
     background-color: black;
   }
@@ -321,10 +331,9 @@ header h1 {
   header {
     background-size: auto;
     background-position: right top;
-    height: 80vh;
+    height: 70vh;
     background-position-x: 95%;
     background-position-y: 10%;
-    margin-bottom: 4rem;
   }
   header h1 {
     font-size: 1.125rem;
@@ -370,6 +379,16 @@ header h1 {
     font-size: 3.55rem;
     margin-left: 0;
     font-weight: 200;
+  }
+  header .believe img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: contain;
+    max-height: 100%;
+    width: 100%;
+    background-color: black;
   }
   header .button {
     background-color: black;
